@@ -1,6 +1,6 @@
 import React from 'react'
-import {useDisclosure} from '@chakra-ui/hooks'
-import { IconButton } from '@chakra-ui/button';
+//import {useDisclosure} from '@chakra-ui/hooks'
+//import { IconButton } from '@chakra-ui/button';
 import { ViewIcon } from '@chakra-ui/icons';
 import {
   Modal,
@@ -11,8 +11,8 @@ import {
   ModalBody,
   ModalCloseButton,
   Button,
-  //useDisclosure,
-  //IconButton,
+  useDisclosure,
+  IconButton,
   Text,
   Image,
 } from "@chakra-ui/react";
@@ -27,7 +27,7 @@ const ProfileModal = ({user, children}) => {
     {children ? (
         <span onClick={onOpen}>{children}</span>
       ) : (
-        <IconButton d={{ base: "flex" }} icon={<ViewIcon />} onClick={onOpen} />
+        <IconButton display={{ base: "flex" }} icon={<ViewIcon />} onClick={onOpen} />
     )}
 
     <Modal size="lg" onClose={onClose} isOpen={isOpen} isCentered>
